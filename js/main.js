@@ -103,15 +103,15 @@ const calculator = () => {
     },
 
     formatDays(min, max) {
-			if (typeof min === "undefined") {
-				return "&nbsp;";
-			} else if (min === max) {
-				const pluralSuffix = (max > 1) ? 'дня' : 'день';
-				return `${max} ${pluralSuffix}`;
-			} else {
-				const pluralSuffix = (max > 4) ? 'дней' : 'дня';
-				return `${min} - ${max} ${pluralSuffix}`;
-			}
+      if (typeof min === "undefined") {
+        return "&nbsp;";
+      } else if (min === max) {
+        const pluralSuffix = max > 1 ? "дня" : "день";
+        return `${max} ${pluralSuffix}`;
+      } else {
+        const pluralSuffix = max > 4 ? "дней" : "дня";
+        return `${min} - ${max} ${pluralSuffix}`;
+      }
     },
   };
 };
